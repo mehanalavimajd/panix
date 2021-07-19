@@ -7,7 +7,7 @@ let's make a simple example in panix :
 ```js
 import {node , mount , update} from "panix"
 let item = mount(node("h1",{id:"hello"},""),document.body)
-update(node("h1" , {id:"hello} , "hello world") , item)
+update(node("h1" , {id:"hello"} , "hello world") , item)
 ```
 Now You have made your first panix project 
 ### License
