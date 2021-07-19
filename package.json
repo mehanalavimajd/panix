@@ -1,0 +1,19 @@
+{
+  "name": "panix",
+  "version": "1.0.0",
+  "description": "2 kb Virtual Dom library",
+  "main": "./dist/panix.min.js",
+  "scripts": {
+    "test": "echo no test found && exit 0",
+    "pretty": "npx prettier --write .",
+    "minify": "node .minify.js"
+  },
+  "author": "mehan alavimajd",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "uglify-js": "^3.13.10"
+  }
+}
