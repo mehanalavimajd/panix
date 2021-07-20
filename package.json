@@ -1,7 +1,7 @@
 {
   "name": "panix",
   "version": "1.0.0",
-  "description": "2 kb Virtual Dom library",
+  "description": "tiny-weight Virtual Dom library",
   "main": "./dist/panix.min.js",
   "scripts": {
     "test": "echo no test found && exit 0",
@@ -9,7 +9,7 @@
     "minify": "node .minify.js"
   },
   "author": "mehan alavimajd",
-  "license": "MIT",
+  "license": "see License in LICENSE",
   "devDependencies": {
     "prettier": "^2.3.2"
   },
