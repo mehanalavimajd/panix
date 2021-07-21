@@ -11,4 +11,4 @@ update(node("h1" , {id:"hello"} , "hello world") , item)
 ```
 Now You have made your first panix project 
 ### License
-MIT
+See license in LICENSE file
