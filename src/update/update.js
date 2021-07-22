@@ -1,5 +1,3 @@
-import { unmount } from "../unmount/unmount.js";
-import { mount } from "../mount/mount.js";
 export function update(newnode, oldel) {
   if (newnode.tag !== oldel.tagName) {
     mount(newnode, oldel.parentNode);

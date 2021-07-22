@@ -1,5 +1,5 @@
 import { it, describe, expect } from "./index.js";
-import { node } from "../src/node/node.js";
+import { node } from "../dist/panix.js";
 // test1:
 describe("Node tests", () => {
   it("It should make correct tag", () => {

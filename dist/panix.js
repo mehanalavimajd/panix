@@ -1,9 +1,9 @@
 export var mount = function (el, continer) {
   var element = document.createElement(`${el.tag}`);
   if (typeof el.props == "object" && el.props !== null) {
-    Object.entries(el.props).forEach(([key , val])=>{
-      element.setAttribute(key , val)
-    })
+    Object.entries(el.props).forEach(([key, val]) => {
+      element.setAttribute(key, val);
+    });
 
     if (typeof el.children === "string") {
       element.appendChild(document.createTextNode(el.children));
@@ -17,9 +17,11 @@ export var mount = function (el, continer) {
     return element;
   }
 };
+
 export var unmount = (el) => {
   el.parentNode.removeChild(el);
 };
+
 export var node = function (tag, props, children) {
   return {
     tag: tag,
@@ -58,5 +60,16 @@ export function update(newnode, oldel) {
       mount(newnode, oldel.parentNode);
       unmount(oldel);
     }
+  }
+}
+
+export function style(obj) {
+  if (typeof obj === "object" && obj !== null) {
+    let array = [];
+    Object.entries(obj).forEach(([key, val]) => {
+      key = key.split("'");
+      array.push(`${key}:${val};`);
+    });
+    return array;
   }
 }

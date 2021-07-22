@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo no test found && exit 0",
     "pretty": "npx prettier --write .",
-    "minify": "node .minify.js"
+    "bundle":"node .bundle.js"
   },
   "author": "mehan alavimajd",
   "license": "see License in LICENSE",
