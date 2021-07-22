@@ -1,9 +1,9 @@
 export var mount = function (el, continer) {
   var element = document.createElement(`${el.tag}`);
   if (typeof el.props == "object" && el.props !== null) {
-    for (var key in el.props) {
-      element.setAttribute(key, el.props[key]);
-    }
+    Object.entries(el.props).forEach(([key , val])=>{
+      element.setAttribute(key , val)
+    })
 
     if (typeof el.children === "string") {
       element.appendChild(document.createTextNode(el.children));
