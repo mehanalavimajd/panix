@@ -4,11 +4,22 @@ let unmount = fs.readFileSync("./src/unmount/unmount.js").toString();
 let node = fs.readFileSync("./src/node/node.js").toString();
 let update = fs.readFileSync("./src/update/update.js").toString();
 let style = fs.readFileSync("./src/style/style.js");
+let styleHtml = fs.readFileSync("./src/styleHtml/styleHtml.js");
 
 if (!fs.existsSync("./dist/panix.js")) {
   fs.writeFileSync("./dist/panix.js", "");
 }
 fs.writeFileSync(
   "./dist/panix.js",
-  mount + "\n" + unmount + "\n" + node + "\n" + update + "\n" + style
+  mount +
+    "\n" +
+    unmount +
+    "\n" +
+    node +
+    "\n" +
+    update +
+    "\n" +
+    style +
+    "\n" +
+    styleHtml
 );

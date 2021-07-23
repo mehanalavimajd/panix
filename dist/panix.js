@@ -29,6 +29,7 @@ export var node = function (tag, props, children) {
     children: children,
   };
 };
+
 export function update(newnode, oldel) {
   if (newnode.tag !== oldel.tagName) {
     mount(newnode, oldel.parentNode);
@@ -73,3 +74,12 @@ export function style(obj) {
     return array;
   }
 }
+
+export const styleHtml = (obj, container) => {
+  let css = style(obj);
+  let fullString = "";
+  css.forEach((el) => {
+    fullString += el;
+  });
+  container.setAttribute("style", fullString);
+};
