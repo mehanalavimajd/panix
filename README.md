@@ -1,7 +1,7 @@
 # Panix.js
 
 Panix is a tiny weight Virtual Dom library . <br>
-Today's Virtual Doms have easy syntax but they are heavy , **very heavy** .<br>
+Today's Virtual Doms have easy syntax but they are heavy , **very heavy** . <br>
 Panix goal is to be a fast and tiny Virtual Dom .
 
 ## Hello World
