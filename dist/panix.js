@@ -18,16 +18,36 @@ export var mount = function (el, continer) {
   }
 };
 
-export var unmount = (el) => {
-  el.parentNode.removeChild(el);
-};
-
 export var node = function (tag, props, children) {
   return {
     tag: tag,
     props: props,
     children: children,
   };
+};
+
+export function style(obj) {
+  if (typeof obj === "object" && obj !== null) {
+    let array = [];
+    Object.entries(obj).forEach(([key, val]) => {
+      key = key.split("'");
+      array.push(`${key}:${val};`);
+    });
+    return array;
+  }
+}
+
+export const styleHtml = (obj, container) => {
+  let css = style(obj);
+  let fullString = "";
+  css.forEach((el) => {
+    fullString += el;
+  });
+  container.setAttribute("style", fullString);
+};
+
+export var unmount = (el) => {
+  el.parentNode.removeChild(el);
 };
 
 export function update(newnode, oldel) {
@@ -64,22 +84,3 @@ export function update(newnode, oldel) {
   }
 }
 
-export function style(obj) {
-  if (typeof obj === "object" && obj !== null) {
-    let array = [];
-    Object.entries(obj).forEach(([key, val]) => {
-      key = key.split("'");
-      array.push(`${key}:${val};`);
-    });
-    return array;
-  }
-}
-
-export const styleHtml = (obj, container) => {
-  let css = style(obj);
-  let fullString = "";
-  css.forEach((el) => {
-    fullString += el;
-  });
-  container.setAttribute("style", fullString);
-};
