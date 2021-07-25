@@ -13,7 +13,7 @@ let el3 = mount(
   document.getElementById("main")
 );
 let el4 = mount(
-  node("h1", { id: "hello4" }, "hello"),
+  node("h1", { id: "hello4" }, ["hello"]),
   document.getElementById("main")
 );
 
@@ -36,6 +36,8 @@ describe("update tests", () => {
   //
   it("correct string child", () => {
     update(node("h6", { id: "hi3" }, [node("h4", {}, "hello")]), el4);
-    expect(document.getElementById("hi3").children[0].tagName).toBe("H4");
+    expect(document.getElementById("hi3").children[0].textContent).toBe(
+      "hello"
+    );
   });
 });

@@ -71,15 +71,29 @@ export function update(newnode, oldel) {
           oldValue = newValue;
         }
       });
+    } else {
+      mount(newnode, oldel.parentNode);
+      unmount(oldel);
     }
     // children
+    if (Array.isArray(newnode.children)) {
+      if (newnode.children.length === oldel.children.length) {
+        let i = 0;
+        newnode.forEach((child) => {
+          if (newnode.children[i] !== oldel.children[i]) {
+            oldel.children[0] = newnode.children[0];
+          }
+          i++;
+        });
+      } else {
+        mount(newnode, oldel.parentNode);
+        unmount(oldel);
+      }
+    }
     if (typeof newnode.children == "string") {
       if (newnode.children !== oldel.textContent) {
         oldel.textContent = newnode.children;
       }
-    } else {
-      mount(newnode, oldel.parentNode);
-      unmount(oldel);
     }
   }
 }
