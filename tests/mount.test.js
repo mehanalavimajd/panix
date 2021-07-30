@@ -14,7 +14,15 @@ describe("mount tests", () => {
   });
   // test 3
   it("correct Children", () => {
-    mount(node("h1", { id: "name3" }, [node("p", {}, "hello")]), document.body);
-    expect(document.getElementById("name3").children[0].tagName).toBe("P");
+    let a = mount(
+      node("h1", { id: "name3" }, [node("p", {}, "hello")]),
+      document.body
+    );
+    expect(a.children[0].tagName).toBe("P");
+  });
+  // test 4
+  it("null as props", () => {
+    let a = mount(node("h1", null, ["hello"]), document.body);
+    expect(a.attributes).toEqual({});
   });
 });

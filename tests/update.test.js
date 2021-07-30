@@ -1,7 +1,7 @@
 import { node, mount, update } from "../dist/panix.js";
 import { it, describe, expect } from "./index.js";
 let el = mount(
-  node("h1", { id: "hello" }, "hello"),
+  node("h1", { id: "hellou" }, "hello"),
   document.getElementById("main")
 );
 let el2 = mount(
@@ -13,7 +13,7 @@ let el3 = mount(
   document.getElementById("main")
 );
 let el4 = mount(
-  node("h1", { id: "hello4" }, ["hello"]),
+  node("h1", { id: "hello4" }, "hello"),
   document.getElementById("main")
 );
 
