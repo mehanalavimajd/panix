@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo no test found && exit 0",
     "pretty": "npx prettier --write .",
-    "bundle":"node .bundler.js",
-    "minify":"node .minify.js",
-    "prepare": "npx prettier --write . && node .bundler.js && node .minify.js"
-    
+    "bundle": "node .bundler.js",
+    "minify": "node .minify.js",
+    "prepare": "npx prettier --write . && node .bundler.js && node .minify.js && husky install"
   },
   "author": "mehan alavimajd",
   "license": "see License in LICENSE",
   "devDependencies": {
+    "husky": "^7.0.0",
     "prettier": "^2.3.2"
   },
   "dependencies": {

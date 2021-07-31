@@ -1,4 +1,4 @@
-export var mount = (el, continer) =>{
+export var mount = (el, continer) => {
   var element = document.createElement(`${el.tag}`);
   if (!el.props) {
     el.props = {};
