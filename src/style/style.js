@@ -1,8 +1,7 @@
 export function style(obj) {
-  if (typeof obj === "object" && obj !== null) {
+  if (typeof obj === "object" && !Array.isArray(obj)) {
     let array = [];
     Object.entries(obj).forEach(([key, val]) => {
-      key = key.split("'");
       array.push(`${key}:${val};`);
     });
     return array;
