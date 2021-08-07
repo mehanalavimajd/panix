@@ -1,5 +1,6 @@
 let glob = require("glob");
 let fs = require("fs");
+const uglify = require("uglify-js");
 
 function bundle() {
   glob("./src/**/*.js", (err, files) => {
@@ -13,4 +14,10 @@ function bundle() {
     });
   });
 }
+function minify() {
+  const code = fs.readFileSync("./dist/panix.js").toString();
+  let result = uglify.minify(code);
+  fs.writeFileSync("./dist/panix.min.js", result.code);
+}
 bundle();
+minify();
