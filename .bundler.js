@@ -1,10 +1,18 @@
-const fs = require("fs");
+let glob = require("glob");
+let fs = require("fs");
 
-fs.writeFileSync("./dist/panix.js", "");
-fs.readdir("./src/", (err, f) => {
-  if (err) console.log(err);
-  for (const i in f) {
-    let a = fs.readFileSync(`./src/${f[i]}/${f[i]}.js`).toString();
-    fs.appendFileSync("./dist/panix.js", a + "\n");
-  }
-});
+function bundle() {
+  glob("./src/**/*.js", (err, files) => {
+
+    if (err) {
+      console.log(err);
+    }
+    fs.writeFileSync("./dist/panix.js","")
+    files.forEach((el) => {
+      let context = fs.readFileSync(el).toString();
+    fs.appendFileSync("./dist/panix.js",context)
+    });
+  });
+
+}
+bundle()
