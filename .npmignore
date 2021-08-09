@@ -1,0 +1,9 @@
+node_modules/
+*.html
+*.css
+*.log
+syntax/
+*example*
+.husky/
+.github/
+tests/
