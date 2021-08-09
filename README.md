@@ -1,5 +1,5 @@
-![](https://img.shields.io/codefactor/grade/github/mehanalavimajd/panix?label=Code%20Quality)
 # Panix.js
+![](https://img.shields.io/codefactor/grade/github/mehanalavimajd/panix?label=Code%20Quality) ![GitHub file size in bytes](https://img.shields.io/github/size/mehanalavimajd/panix/dist/panix.min.js?label=minified%20sized) ![](https://img.shields.io/depfu/mehanalavimajd/panix) ![](https://img.shields.io/github/last-commit/mehanalavimajd/panix)
 
 Panix is a tiny weight Virtual Dom library . <br>
 Today's Virtual Doms have easy syntax but they are heavy , **very heavy** . <br>
