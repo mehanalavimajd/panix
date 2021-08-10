@@ -9,6 +9,7 @@ Panix goal is to be a fast and tiny Virtual Dom .
 ## Installation
 
 you can use CDNs like unpkg or jsdelivr:
+
 jsdelivr (minified version):
 
 ```html
