@@ -19,5 +19,11 @@
   "dependencies": {
     "glob": "^7.1.7",
     "uglify-js": "^3.14.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "directory": "https://github.com/mehanalavimajd/panix"
+  },
+  "homepage": "https://github.com/mehanalavimajd/panix",
+  "bugs": "https://github.com/mehanalavimajd/panix/issues"
 }

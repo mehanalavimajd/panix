@@ -1,4 +1,5 @@
 ![](https://img.shields.io/codefactor/grade/github/mehanalavimajd/panix?label=Code%20Quality)
+
 # Panix.js
 
 Panix is a tiny weight Virtual Dom library . <br>
