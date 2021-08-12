@@ -2,19 +2,19 @@ Welcome to panix.js documentation . <br>
 Panix is a javascript library that allows you to make dynamic webpages webpages . It uses virtual dom that is faster that normal dom .
 
 
-table of content:
-    - Introduction :
-        - [what is panix ?](what-is-panix.md)
-        - [panix vs react](vs-react.md)
-    - Installation :
-        - [via CDNs](CDN.md)
-        - [via npm](npm.md)
-    - mounting :
-        - [node function](node.md)
-        - [mount function](mount.md)
-    - updating :
-        - [update function](update.md)
-    - events :
-        - [addEvent function](addevent.md)
-    - advanced :
-        - [style function](style.md)
+- table of content: <br>
+    - Introduction : <br>
+        - [what is panix ?](what-is-panix.md) <br>
+        - [panix vs react](vs-react.md) <br>
+    - Installation : <br>
+        - [via CDNs](CDN.md) <br>
+        - [via npm](npm.md) <br>
+    - mounting : <br>
+        - [node function](node.md) <br>
+        - [mount function](mount.md) <br>
+    - updating : <br>
+        - [update function](update.md) <br>
+    - events : <br>
+        - [addEvent function](addevent.md) <br>
+    - advanced : <br>
+        - [style function](style.md) <br>
