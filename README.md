@@ -49,4 +49,4 @@ Now You have made your first panix project
 
 ### License
 
-See license in LICENSE file
+See license in (LICENSE)[LICENSE] file
