@@ -1,6 +1,7 @@
 Welcome to panix.js documentation . <br>
 Panix is a javascript library that allows you to make dynamic webpages webpages . It uses virtual dom that is faster that normal dom .
 
+
 table of content:
     - Introduction :
         - [what is panix ?](what-is-panix.md)
