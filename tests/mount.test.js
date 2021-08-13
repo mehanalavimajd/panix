@@ -27,7 +27,15 @@ describe("mount tests", () => {
   });
   // test 5
   it("two strings", () => {
-    let a = mount(node("h1", null, ["hello","hello world"]), document.body);
+    let a = mount(node("h1", null, ["hello", "world"]), document.body);
     expect(a.textContent).toBe("helloworld");
+  });
+  // test 6
+  it("1 node and 1 string", () => {
+    let a = mount(
+      node("h1", null, ["hello", node("h1", null, "hello")]),
+      document.body
+    );
+    expect(a.textContent).toBe("hellohello");
   });
 });
