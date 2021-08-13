@@ -13,25 +13,25 @@ you can use CDNs like unpkg or jsdelivr:
 jsdelivr (minified version):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.min.js"></script>
 ```
 
 jsdelivr (normal version):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.js"></script>
 ```
 
 unpkg (minified version):
 
 ```html
-<script src="https://unpkg.com/panix@version/dist/panix.min.js"></script>
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.js"></script>
 ```
 
 unpkg (normal version):
 
 ```html
-<script src="https://unpkg.com/panix@version/dist/panix.js"></script>
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.js"></script>
 ```
 
 **Note** : replace version with version that you want
