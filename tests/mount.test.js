@@ -25,4 +25,9 @@ describe("mount tests", () => {
     let a = mount(node("h1", null, ["hello"]), document.body);
     expect(a.attributes).toEqual({});
   });
+  // test 5
+  it("two strings", () => {
+    let a = mount(node("h1", null, ["hello","hello world"]), document.body);
+    expect(a.textContent).toBe("helloworld");
+  });
 });
