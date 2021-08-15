@@ -33,9 +33,27 @@ unpkg (normal version):
 ```html
 <script src="https://unpkg.com/panix@version/dist/panix.js"></script>
 ```
+Or if you want to use npm use:
+```
+npm i panix
+```
+but do not forget to add a importmap like this:
+```html
+<script type="importmap">
+{
+  "imports": {
+    "panix": "/node_modules/panix/dist/panix.js"
+  }
+}
+</script>
+```
+and simply
+```js
+import * as panix from "panix"
+```
 
-**Note** : replace version with version that you want
-
+**Note** : if you are using CDNs, replace version with version that you want
+**Note** : always add `type="module` to your script when you are importing
 ## Hello World
 
 let's make a simple example in panix :
