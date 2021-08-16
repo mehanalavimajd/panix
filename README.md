@@ -42,7 +42,7 @@ but do not forget to add a importmap like this:
 <script type="importmap">
 {
   "imports": {
-    "panix": "/node_modules/panix/dist/panix.js"
+    "panix": "./node_modules/panix/dist/panix.js"
   }
 }
 </script>
