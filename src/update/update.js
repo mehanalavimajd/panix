@@ -1,7 +1,10 @@
 export function update(newnode, oldel) {
-  let restart = ()=>{    mount(newnode, oldel.parentNode);unmount(oldel);}
+  let restart = () => {
+    mount(newnode, oldel.parentNode);
+    unmount(oldel);
+  };
   if (newnode.tag !== oldel.tagName) {
-    restart()
+    restart();
   } else {
     // props
     if (newnode.props.length === oldel.attributes.length) {
@@ -20,7 +23,7 @@ export function update(newnode, oldel) {
         }
       });
     } else {
-      restart()
+      restart();
     }
     // children
     if (Array.isArray(newnode.children)) {
@@ -33,7 +36,7 @@ export function update(newnode, oldel) {
           i++;
         });
       } else {
-        restart()
+        restart();
       }
     }
     if (typeof newnode.children == "string") {

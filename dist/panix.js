@@ -51,9 +51,12 @@ export var unmount = (el) => {
   el.parentNode.removeChild(el);
 };
 export function update(newnode, oldel) {
-  if (newnode.tag !== oldel.tagName) {
+  let restart = () => {
     mount(newnode, oldel.parentNode);
     unmount(oldel);
+  };
+  if (newnode.tag !== oldel.tagName) {
+    restart();
   } else {
     // props
     if (newnode.props.length === oldel.attributes.length) {
@@ -72,8 +75,7 @@ export function update(newnode, oldel) {
         }
       });
     } else {
-      mount(newnode, oldel.parentNode);
-      unmount(oldel);
+      restart();
     }
     // children
     if (Array.isArray(newnode.children)) {
@@ -86,8 +88,7 @@ export function update(newnode, oldel) {
           i++;
         });
       } else {
-        mount(newnode, oldel.parentNode);
-        unmount(oldel);
+        restart();
       }
     }
     if (typeof newnode.children == "string") {
