@@ -52,7 +52,7 @@ and simply
 import * as panix from "panix"
 ```
 
-**Note** : if you are using CDNs, replace version with version that you want
+**Note** : if you are using CDNs, replace version with version that you want <br>
 **Note** : always add `type="module` to your script when you are importing
 ## Hello World
 

@@ -7,8 +7,7 @@ Panix is a javascript library that allows you to make dynamic webpages webpages 
         - [what is panix ?](what-is-panix.md) <br>
         - [panix vs react](vs-react.md) <br>
     - Installation : <br>
-        - [via CDNs](CDN.md) <br>
-        - [via npm](npm.md) <br>
+        - [Installation](Installation.md)
     - mounting : <br>
         - [node function](node.md) <br>
         - [mount function](mount.md) <br>
