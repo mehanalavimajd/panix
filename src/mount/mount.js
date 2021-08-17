@@ -1,4 +1,4 @@
-export var mount = (el, continer) => {
+export var mount = (el, container) => {
   var element = document.createElement(`${el.tag}`);
   if (!el.props) {
     el.props = {};
@@ -14,13 +14,13 @@ export var mount = (el, continer) => {
   } else {
     for (let index = 0; index < el.children.length; index++) {
       if (typeof el.children[index] === "string") {
-        element.appendChild(document.createTextNode(el.children));
+        element.textContent += el.children[index];
       } else {
         const item = el.children[index];
         mount(item, element);
       }
     }
   }
-  continer.appendChild(element);
+  container.appendChild(element);
   return element;
 };

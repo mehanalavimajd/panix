@@ -5,7 +5,7 @@ export const addEvent = (el, onevent, callback) => {
   }
   el.addEventListener(onevent, callback);
 };
-export var mount = (el, continer) => {
+export var mount = (el, container) => {
   var element = document.createElement(`${el.tag}`);
   if (!el.props) {
     el.props = {};
@@ -21,21 +21,21 @@ export var mount = (el, continer) => {
   } else {
     for (let index = 0; index < el.children.length; index++) {
       if (typeof el.children[index] === "string") {
-        element.appendChild(document.createTextNode(el.children));
+        element.textContent += el.children[index];
       } else {
         const item = el.children[index];
         mount(item, element);
       }
     }
   }
-  continer.appendChild(element);
+  container.appendChild(element);
   return element;
 };
 export var node = function (tag, props, children) {
   return {
-    tag: tag,
-    props: props,
-    children: children,
+    tag,
+    props,
+    children,
   };
 };
 export function style(obj) {
@@ -51,9 +51,12 @@ export var unmount = (el) => {
   el.parentNode.removeChild(el);
 };
 export function update(newnode, oldel) {
-  if (newnode.tag !== oldel.tagName) {
+  let restart = () => {
     mount(newnode, oldel.parentNode);
     unmount(oldel);
+  };
+  if (newnode.tag !== oldel.tagName) {
+    restart();
   } else {
     // props
     if (newnode.props.length === oldel.attributes.length) {
@@ -72,8 +75,7 @@ export function update(newnode, oldel) {
         }
       });
     } else {
-      mount(newnode, oldel.parentNode);
-      unmount(oldel);
+      restart();
     }
     // children
     if (Array.isArray(newnode.children)) {
@@ -86,8 +88,7 @@ export function update(newnode, oldel) {
           i++;
         });
       } else {
-        mount(newnode, oldel.parentNode);
-        unmount(oldel);
+        restart();
       }
     }
     if (typeof newnode.children == "string") {
