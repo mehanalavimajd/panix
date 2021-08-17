@@ -1,4 +1,4 @@
-export var mount = (el, continer) => {
+export var mount = (el, container) => {
   var element = document.createElement(`${el.tag}`);
   if (!el.props) {
     el.props = {};
@@ -21,6 +21,6 @@ export var mount = (el, continer) => {
       }
     }
   }
-  continer.appendChild(element);
+  container.appendChild(element);
   return element;
 };
