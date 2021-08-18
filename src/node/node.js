@@ -1,4 +1,4 @@
-export var node = function (tag, props, children) {
+export var node = (tag, props, children) => {
   return {
     tag,
     props,
