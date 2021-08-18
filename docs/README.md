@@ -11,6 +11,7 @@ Panix is a javascript library that allows you to make dynamic webpages webpages 
     - mounting : <br>
         - [node function](node.md) <br>
         - [mount function](mount.md) <br>
+        - [unmount function](unmount.md)
     - updating : <br>
         - [update function](update.md) <br>
     - events : <br>
