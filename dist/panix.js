@@ -31,7 +31,7 @@ export var mount = (el, container) => {
   container.appendChild(element);
   return element;
 };
-export var node = function (tag, props, children) {
+export var node = (tag, props, children) => {
   return {
     tag,
     props,
