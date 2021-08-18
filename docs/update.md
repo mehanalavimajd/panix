@@ -14,4 +14,4 @@ update(node('h1',{},"goodbye world"),el)
 **note** : in here that new h1 that contains "goodbye world" parent is again `document.body`
 ## How it works ?
 If you are interested that how to does update works , you can look at this flowchart :
-![./img/flowchart.png](flowchart)
+![flowchart](https://github.com/blob/dev/docs/img/flowchart.png)
