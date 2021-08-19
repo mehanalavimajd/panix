@@ -7,3 +7,5 @@ syntax/
 .husky/
 .github/
 tests/
+docs/
+.prettierignore
