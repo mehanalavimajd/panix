@@ -1,7 +1,10 @@
 # Mount function 
 Mount is the panix function for rendering. It takes 2 arguments:
-1- node : an object that tag , props and children has already declared in it  
-2- container : html element that is th parent of new element
+
+Argument name | Argument type
+--- | --- |
+node | an object that tag , props and children has already declared in it 
+container | html element that is th parent of new element
 
 ### Syntax
 ```js
@@ -30,3 +33,8 @@ let el =  mount(node("div" , {id:"hello"} , "hello world"),document.getElementBy
 el.id // hello
 ```
 **NOTE**:* mount function would create and insert to DOM in every situation *
+
+What's next
+==========
+
+[unmount function](unmount.md)

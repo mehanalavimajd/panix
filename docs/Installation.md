@@ -48,3 +48,8 @@ unpkg (normal version):
 
 **Note** : if you are using CDNs, replace version with version that you want <br>
 **Note** : always add `type="module"` to your script when you are importing
+
+What's next
+===========
+
+[node functiion](node.md)

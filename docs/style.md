@@ -1,7 +1,8 @@
 # Style function
 Style is a function that turns a javascript object to css.
+
 arguments:
-1- object : an object
+1. object: an object
 
 
 ### Syntax

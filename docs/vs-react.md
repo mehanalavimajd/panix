@@ -9,3 +9,8 @@ ReactDOM.render(<p>Hello</p>, document.body)
 ```js
 mount(node("p",{},"hello"),document.body)
 ```
+
+What's next
+===========
+
+[Panix installation](Installation.md)
