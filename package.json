@@ -25,5 +25,6 @@
     "directory": "https://github.com/mehanalavimajd/panix"
   },
   "homepage": "https://github.com/mehanalavimajd/panix",
-  "bugs": "https://github.com/mehanalavimajd/panix/issues"
+  "bugs": "https://github.com/mehanalavimajd/panix/issues",
+  "keywords": ["front-end","virtual-dom"]
 }
