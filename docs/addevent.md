@@ -30,3 +30,6 @@ addEvent(element,"cLiCK",()=>{
     console.log("clicked")
 })
 ```
+
+# What's next
+[style function](style.md)
