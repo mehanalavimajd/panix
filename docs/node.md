@@ -20,3 +20,8 @@ and it would return :
 ```js
 node(tag , props , children)
 ```
+
+What's next
+============
+
+[mount function](mount.md)
