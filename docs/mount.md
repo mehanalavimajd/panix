@@ -33,3 +33,8 @@ let el =  mount(node("div" , {id:"hello"} , "hello world"),document.getElementBy
 el.id // hello
 ```
 **NOTE**:* mount function would create and insert to DOM in every situation *
+
+What's next
+==========
+
+[unmount function](unmount.md)
