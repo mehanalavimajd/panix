@@ -1,7 +1,8 @@
 # Update function
-Now it's time to face with virtual DOM . Update is the panix function for Editing the elements . It gets to arguments that 
-1- new node 
-2- old element that is variable that it's value is a mount function
+Now it's time to face with virtual DOM . Update is the panix function for Editing the elements . It gets to arguments that:
+
+1. new node 
+2. old element that is variable that it's value is a mount function
 ## Syntax
 ```js
 update(newnode,oldel)
