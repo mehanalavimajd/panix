@@ -1,9 +1,10 @@
 # addEvent function
-This function will make events for elements
-it get 3 argument :
-1- The element
-2- event name
-3- callback function
+This function will make events for elements.
+it get 3 argument:
+
+1. The element
+2. event name
+3. callback function
 ## Syntax
 ```js
 addEvent(el,event,func)
