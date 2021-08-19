@@ -1,5 +1,5 @@
 # Panix.js
-<img style="align:center" src="https://github.com/mehanalavimajd/panix/blob/dev/docs/img/logo.gif"></img>
+![panix js](https://user-images.githubusercontent.com/74927578/130037083-3b841304-4108-4452-8ee5-dd35570d210c.gif)
 
 ![](https://img.shields.io/codefactor/grade/github/mehanalavimajd/panix?label=Code%20Quality) ![npm](https://img.shields.io/npm/dw/panix) ![GitHub file size in bytes](https://img.shields.io/github/size/mehanalavimajd/panix/dist/panix.min.js?label=minified%20sized) ![](https://img.shields.io/depfu/mehanalavimajd/panix) ![](https://img.shields.io/github/last-commit/mehanalavimajd/panix)
 
