@@ -1,7 +1,7 @@
 {
   "name": "panix",
   "version": "0.0.1",
-  "description": "tiny-weight Virtual Dom library",
+  "description": "Lightweight Virtual Dom library",
   "main": "./dist/panix.min.js",
   "scripts": {
     "test": "echo no test found && exit 0",
