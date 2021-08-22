@@ -31,6 +31,11 @@ export var mount = (el, container) => {
   container.appendChild(element);
   return element;
 };
+export function isNode(node) {
+  return node.tag && (node.props || node.props === null) && node.children
+    ? true
+    : false;
+}
 export var node = (tag, props, children) => {
   return {
     tag,

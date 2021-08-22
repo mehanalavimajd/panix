@@ -21,6 +21,12 @@ and it would return :
 node(tag , props , children)
 ```
 
+#### isNode function
+if you want to detect that is an object a panix node , you an use isNode function:
+```js
+console.log(isNode(node("h1",null,"hello"))) // true
+console.log(isNode({a:"hello"})) // false
+```
 What's next
 ============
 
