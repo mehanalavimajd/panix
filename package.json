@@ -1,6 +1,6 @@
 {
   "name": "panix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight Virtual Dom library",
   "main": "./dist/panix.min.js",
   "scripts": {
@@ -26,5 +26,8 @@
   },
   "homepage": "https://github.com/mehanalavimajd/panix",
   "bugs": "https://github.com/mehanalavimajd/panix/issues",
-  "keywords": ["front-end","virtual-dom"]
+  "keywords": [
+    "front-end",
+    "virtual-dom"
+  ]
 }
