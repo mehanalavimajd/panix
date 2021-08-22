@@ -1,6 +1,6 @@
 {
   "name": "panix",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight Virtual Dom library",
   "main": "./dist/panix.min.js",
   "scripts": {
