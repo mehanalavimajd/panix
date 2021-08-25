@@ -14,7 +14,7 @@ export var mount = (el, container) => {
   } else {
     for (let index = 0; index < el.children.length; index++) {
       if (typeof el.children[index] === "string") {
-        element.textContent += el.children[index];
+        element.appendChild(document.createTextNode(el.children[index]));
       } else {
         const item = el.children[index];
         mount(item, element);
