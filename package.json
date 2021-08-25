@@ -13,7 +13,7 @@
   "author": "mehan alavimajd",
   "license": "see License in LICENSE",
   "devDependencies": {
-    "husky": "^7.0.0",
+    "husky": "^7.0.2",
     "prettier": "^2.3.2"
   },
   "dependencies": {
