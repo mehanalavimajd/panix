@@ -1,5 +1,5 @@
 import { it, describe, expect } from "./index.js";
-import { node } from "../dist/panix.js";
+import { node, isNode } from "../dist/panix.js";
 // test1:
 describe("Node tests", () => {
   it("It should make correct tag", () => {
@@ -19,5 +19,8 @@ describe("Node tests", () => {
       props: { id: "main" },
       children: "hello",
     });
+  });
+  it("is node ?", () => {
+    expect(isNode(node("div", null, "hello"))).toBe(true);
   });
 });
