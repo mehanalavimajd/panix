@@ -5,67 +5,14 @@
 
 Panix is a tiny weight Virtual Dom library . <br>
 Today's Virtual Doms have easy syntax but they are heavy , **very heavy** . <br>
-Panix goal is to be a fast and tiny Virtual Dom .
-
-## Installation
-
-you can use CDNs like unpkg or jsdelivr
-
-jsdelivr (minified version):
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.min.js"></script>
-```
-
-jsdelivr (normal version):
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.js"></script>
-```
-
-unpkg (minified version):
-
-```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.js"></script>
-```
-
-unpkg (normal version):
-
-```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.js"></script>
-```
-Or if you want to use npm use:
-```
-npm i panix
-```
-but do not forget to add a importmap like this:
-```html
-<script type="importmap">
-{
-  "imports": {
-    "panix": "./node_modules/panix/dist/panix.js"
-  }
-}
-</script>
-```
-and simply
-```js
-import * as panix from "panix"
-```
-
-**Note** : if you are using CDNs, replace version with version that you want <br>
-**Note** : always add `type="module` to your script when you are importing
-## Hello World
-
-let's make a simple example in panix :
-
-```js
-let item = mount(node("h1", { id: "hello" }, ""), document.body);
-update(node("h1", { id: "hello" }, "hello world"), item);
-```
-
-Now You have made your first panix project
+Panix goal is to be a fast and light Virtual Dom .
 
 ### License
 
 See license in [LICENSE](LICENSE) file
+
+#### Thank you
+
+Thanks to all of the people who starred panix :
+
+[![Stargazers repo roster for @mehanalavimajd/panix](https://reporoster.com/stars/notext/mehanalavimajd/panix)](https://github.com/mehanalavimajd/panix/stargazers)
