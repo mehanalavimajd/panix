@@ -1,4 +1,4 @@
-import { mount, node, addEvent } from "../dist/panix.ejs.js";
+import { mount, node, addEvent } from "../dist/panix.es.js";
 import { describe, it, expect } from "./index.js";
 
 describe("addEvent tests", () => {
