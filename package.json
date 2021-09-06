@@ -2,7 +2,10 @@
   "name": "panix",
   "version": "0.0.4",
   "description": "Lightweight Virtual Dom library",
-  "main": "./dist/panix.min.js",
+  "main": "./dist/panix.umd.js",
+  "module": "./dist/panix.es.js",
+  "unpkg": "./dist/panix.es.min.js",
+  "jsdelivr": "./dist/panix.es.min.js",
   "scripts": {
     "test": "echo no test found && exit 0",
     "pretty": "npx prettier --write .",
