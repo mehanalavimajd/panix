@@ -1,11 +1,16 @@
-export const addEvent = (el, onevent, callback) => {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+const addEvent = (el, onevent, callback) => {
   onevent = String(onevent).toLowerCase();
   if (onevent.charAt(0) + onevent.charAt(1) === "on") {
     onevent = onevent.substring(2);
   }
   el.addEventListener(onevent, callback);
 };
-export var mount = (el, container) => {
+
+var mount = (el, container) => {
   var element = document.createElement(`${el.tag}`);
   if (!el.props) {
     el.props = {};
@@ -31,19 +36,22 @@ export var mount = (el, container) => {
   container.appendChild(element);
   return element;
 };
-export function isNode(node) {
-  return node.tag && (node.props || node.props === null) && node.children
-    ? true
-    : false;
-}
-export var node = (tag, props, children) => {
+
+var node = (tag, props, children) => {
   return {
     tag,
     props,
     children,
   };
 };
-export function style(obj) {
+
+function isNode(node) {
+  return node.tag && (node.props || node.props === null) && node.children
+    ? true
+    : false;
+}
+
+function style(obj) {
   if (typeof obj === "object" && !Array.isArray(obj)) {
     let array = [];
     Object.entries(obj).forEach(([key, val]) => {
@@ -52,10 +60,12 @@ export function style(obj) {
     return array;
   }
 }
-export var unmount = (el) => {
+
+var unmount = (el) => {
   el.parentNode.removeChild(el);
 };
-export function update(newnode, oldel) {
+
+function update(newnode, oldel) {
   let restart = () => {
     mount(newnode, oldel.parentNode);
     unmount(oldel);
@@ -66,17 +76,9 @@ export function update(newnode, oldel) {
     // props
     if (newnode.props.length === oldel.attributes.length) {
       oldel.attributes.forEach((item) => {
-        var oldKey = item.key;
-        var oldValue = item.value;
+        item.key;
+        item.value;
         for (const [key, value] in newnode.props) {
-          var newKey = key;
-          var newValue = value;
-        }
-        if (newKey !== oldKey) {
-          oldKey = newKey;
-        }
-        if (newValue !== oldValue) {
-          oldValue = newValue;
         }
       });
     } else {
@@ -103,3 +105,11 @@ export function update(newnode, oldel) {
     }
   }
 }
+
+exports.addEvent = addEvent;
+exports.isNode = isNode;
+exports.mount = mount;
+exports.node = node;
+exports.style = style;
+exports.unmount = unmount;
+exports.update = update;

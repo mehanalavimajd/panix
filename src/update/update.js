@@ -1,3 +1,5 @@
+import { mount } from "../mount/mount.js";
+import { unmount } from "../unmount/unmount.js";
 export function update(newnode, oldel) {
   let restart = () => {
     mount(newnode, oldel.parentNode);
