@@ -1,5 +1,5 @@
 import { describe, expect, it } from "./index.js";
-import { node, mount, unmount } from "../dist/panix.js";
+import { node, mount, unmount } from "../dist/panix.es.js";
 
 describe("unmount test", () => {
   //test 1

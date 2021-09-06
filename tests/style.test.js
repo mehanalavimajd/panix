@@ -1,4 +1,4 @@
-import { style } from "../dist/panix.js";
+import { style } from "../dist/panix.es.js";
 import { describe, it, expect } from "./index.js";
 describe("style tests", () => {
   it("correct array", () => {

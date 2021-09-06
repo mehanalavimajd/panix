@@ -1,4 +1,4 @@
-import { node, mount, update } from "../dist/panix.js";
+import { node, mount, update } from "../dist/panix.es.js";
 import { it, describe, expect } from "./index.js";
 let el = mount(
   node("h1", { id: "hellou" }, "hello"),
