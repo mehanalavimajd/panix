@@ -20,7 +20,6 @@ and it would return :
 ```js
 node(tag , props , children)
 ```
-
 #### isNode function
 if you want to detect that is an object a panix node , you an use isNode function:
 ```js
