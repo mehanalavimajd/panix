@@ -14,10 +14,10 @@
   "license": "see License in LICENSE",
   "devDependencies": {
     "husky": "^7.0.2",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "rollup": "^2.56.3"
   },
   "dependencies": {
-    "glob": "^7.1.7",
     "uglify-js": "^3.14.1"
   },
   "repository": {
