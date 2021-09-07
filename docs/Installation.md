@@ -9,7 +9,7 @@ but do not forget to add a importmap like this:
 <script type="importmap">
 {
   "imports": {
-    "panix": "./node_modules/panix/dist/panix.js" 
+    "panix": "./node_modules/panix/dist/panix.es.js" 
   }
 }
 </script>
@@ -19,31 +19,12 @@ and simply
 import * as panix from "panix"
 ```
 # Installation via CDN
-
-you can use CDNs like unpkg or jsdelivr
-
-jsdelivr (minified version):
-
+you can use CDNs like unpkg :
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.min.js"></script>
-```
-
-jsdelivr (normal version):
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/panix@version/dist/panix.js"></script>
-```
-
-unpkg (minified version):
-
-```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.js"></script>
-```
-
-unpkg (normal version):
-
-```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.js"></script>
+<!-- unpkg (minified version): -->
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.es.js"></script>
+<!-- unpkg (normal version): -->
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.es.js"></script>
 ```
 
 **Note** : if you are using CDNs, replace version with version that you want <br>

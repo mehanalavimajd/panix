@@ -9,20 +9,15 @@ Panix goal is to be a fast and tiny Virtual Dom .
 
 ## Installation
 
-you can use CDNs like unpkg or jsdelivr
-
-unpkg (minified version):
-
+you can use CDNs like unpkg :
 ```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.js"></script>
+<!-- unpkg (minified version): -->
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.es.js"></script>
+<!-- unpkg (normal version): -->
+<script type="module" src="https://unpkg.com/panix@version/dist/panix.es.js"></script>
 ```
 
-unpkg (normal version):
-
-```html
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.js"></script>
-```
-Or if you want to use npm use:
+Or if you want to use npm :
 ```
 npm i panix
 ```
@@ -31,7 +26,7 @@ but do not forget to add a importmap like this:
 <script type="importmap">
 {
   "imports": {
-    "panix": "./node_modules/panix/dist/panix.js"
+    "panix": "./node_modules/panix/dist/panix.es.js"
   }
 }
 </script>
