@@ -1,5 +1,4 @@
 export default {
-  // use glob in the input
   input: "./src/index.js",
   output: [
     {
