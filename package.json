@@ -17,7 +17,7 @@
   "license": "see License in LICENSE",
   "devDependencies": {
     "husky": "^7.0.4",
-    "prettier": "^2.3.2",
+    "prettier": "^2.6.2",
     "rollup": "^2.58.0"
   },
   "dependencies": {
