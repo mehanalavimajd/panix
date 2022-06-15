@@ -9,7 +9,6 @@
   "scripts": {
     "test": "echo no test found && exit 0",
     "pretty": "npx prettier --write .",
-    "bundle": "node .bundler.js",
     "minify": "node .minify.js",
     "prepare": "npx prettier --write . && npx rollup -c && node ./minifier.js && husky install"
   },

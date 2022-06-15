@@ -2,78 +2,33 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.panix = {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
-  const addEvent = (el, onevent, callback) => {
-    onevent = String(onevent).toLowerCase();
-    if (onevent.charAt(0) + onevent.charAt(1) === "on") {
-      onevent = onevent.substring(2);
-    }
-    el.addEventListener(onevent, callback);
-  };
-
-  var mount = (el, container) => {
-    var element = document.createElement(`${el.tag}`);
-    if (!el.props) {
-      el.props = {};
-    }
-    if (typeof el.props === "object") {
-      Object.entries(el.props).forEach(([key, val]) => {
-        element.setAttribute(key, val);
-      });
-    }
-
-    if (typeof el.children === "string") {
-      element.appendChild(document.createTextNode(el.children));
-    } else {
-      for (let index = 0; index < el.children.length; index++) {
-        if (typeof el.children[index] === "string") {
-          element.appendChild(document.createTextNode(el.children[index]));
-        } else {
-          const item = el.children[index];
-          mount(item, element);
-        }
-      }
-    }
-    container.appendChild(element);
-    return element;
-  };
-
-  var node = (tag, props, children) => {
+  let node = (tag, props, children) => {
     return {
       tag,
       props,
       children,
     };
   };
-
-  function isNode(node) {
-    return node.tag && (node.props || node.props === null) && node.children
-      ? true
-      : false;
-  }
-
-  function style(obj) {
-    if (typeof obj === "object" && !Array.isArray(obj)) {
-      let array = [];
-      Object.entries(obj).forEach(([key, val]) => {
-        array.push(`${key}:${val};`);
-      });
-      return array;
+  let createElement = (node) => {
+    let el = document.createElement(node.tag);
+    for (const [key, value] in node.props) {
+      el.setAttribute(key, value);
     }
-  }
-
-  var unmount = (el) => {
-    el.parentNode.removeChild(el);
+    if (Array.isArray(node.children)) {
+      node.children.forEach((child) => {
+        createElement(child);
+      });
+    }
+    if (typeof node.children == "string") {
+      el.innerHTML = node.children;
+    }
+    return el;
   };
-
-  function update(newnode, oldel) {
-    let restart = () => {
-      mount(newnode, oldel.parentNode);
-      unmount(oldel);
-    };
+  let update = (newnode, oldel) => {
     if (newnode.tag !== oldel.tagName) {
-      restart();
+      oldel.parentNode.replaceChild(createElement(newnode), oldel);
     } else {
       // props
       if (newnode.props.length === oldel.attributes.length) {
@@ -83,8 +38,6 @@
           for (const [key, value] in newnode.props) {
           }
         });
-      } else {
-        restart();
       }
       // children
       if (Array.isArray(newnode.children)) {
@@ -92,30 +45,29 @@
           let i = 0;
           newnode.forEach((child) => {
             if (newnode.children[i] !== oldel.children[i]) {
-              oldel.children[0] = newnode.children[0];
+              oldel.children[i] = newnode.children[i];
             }
             i++;
           });
         } else {
-          restart();
+          oldel.parentNode.replaceChild(createElement(newnode), oldel);
         }
-      }
-      if (typeof newnode.children == "string") {
+      } else if (typeof newnode.children == "string") {
         if (newnode.children !== oldel.textContent) {
           oldel.textContent = newnode.children;
         }
       }
     }
-  }
+  };
+  let render = (node, el) => {
+    el.appendChild(createElement(node));
+  };
 
-  exports.addEvent = addEvent;
-  exports.isNode = isNode;
-  exports.mount = mount;
+  exports.createElement = createElement;
   exports.node = node;
-  exports.style = style;
-  exports.unmount = unmount;
+  exports.render = render;
   exports.update = update;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

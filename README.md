@@ -5,46 +5,26 @@
 
 Panix is a tiny weight Virtual Dom library . <br>
 Today's Virtual Doms have easy syntax but they are heavy , **very heavy** . <br>
-Panix goal is to be a fast and tiny Virtual Dom .
+Panix is one of the most lightweight (~1kb) virtual DOM implementation, and is a learning resource more than a tool you should actually use in production.
 
 ## Installation
-
-you can use CDNs like unpkg :
-```html
-<!-- unpkg (minified version): -->
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.min.es.js"></script>
-<!-- unpkg (normal version): -->
-<script type="module" src="https://unpkg.com/panix@version/dist/panix.es.js"></script>
-```
-
 Or if you want to use npm :
 ```
 npm i panix
 ```
-but do not forget to add a importmap like this:
-```html
-<script type="importmap">
-{
-  "imports": {
-    "panix": "./node_modules/panix/dist/panix.es.js"
-  }
-}
-</script>
-```
 and simply
 ```js
-import * as panix from "panix"
+import {node, createElement, update} from "panix"
 ```
-
-**Note** : if you are using CDNs, replace version with version that you want <br>
 **Note** : always add `type="module"` to your script when you are importing
 ## Hello World
 
 let's make a simple example in panix :
-
 ```js
-let item = mount(node("h1", { id: "hello" }, ""), document.body);
-update(node("h1", { id: "hello" }, "hello world"), item);
+let el = createElement(node("h1", { id: "hello" },"Hello World"));
+render(el, document.body); // render the element to the body
+let newNode= createElement(node("h1", { id: "hello" },"Bye World"));
+update(el, newNode); // update the element
 ```
 
 Now You have made your first panix project.
