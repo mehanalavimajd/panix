@@ -23,7 +23,7 @@ let's make a simple example in panix :
 ```js
 let el = createElement(node("h1", { id: "hello" },"Hello World"));
 render(el, document.body); // render the element to the body
-let newNode= createElement(node("h1", { id: "hello" },"Bye World"));
+let newNode= node("h1", { id: "hello" },"Bye World");
 update(el, newNode); // update the element
 ```
 

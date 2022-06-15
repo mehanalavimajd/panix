@@ -65,3 +65,6 @@ let render = (node, el) => {
   el.appendChild(createElement(node));
 };
 export { node, createElement, update, render };
+// test
+let el = createElement(node("h1", {}, "Hello World"));
+ren
