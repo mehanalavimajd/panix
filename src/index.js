@@ -1,3 +1,4 @@
+import error from "./error.js"
 let node = (tag, props, children) => {
   return {
     tag,
@@ -14,9 +15,10 @@ let createElement = (node) => {
     node.children.forEach((child) => {
       createElement(child, el);
     });
-  }
-  if (typeof node.children == "string") {
+  }else if (typeof node.children == "string") {
     el.innerHTML = node.children;
+  }else{
+    error("The children argument of node should be either an array or String")
   }
   return el;
 };
