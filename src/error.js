@@ -1,3 +1,4 @@
-const error = (text)=>{
-    console.error(text,"Panix.js")
+ const error = (text)=>{
+    throw new Error("Panix.js has made a problem: "+text)
 }
+export default error;
