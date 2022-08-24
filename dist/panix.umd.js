@@ -4,6 +4,10 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.panix = {}));
 })(this, (function (exports) { 'use strict';
 
+  const error = (text) => {
+    throw new Error("Panix.js has made a problem: " + text);
+  };
+
   let node = (tag, props, children) => {
     return {
       tag,
@@ -14,15 +18,17 @@
   let createElement = (node) => {
     let el = document.createElement(node.tag);
     for (const [key, value] in node.props) {
+      console.log(key, value);
       el.setAttribute(key, value);
     }
     if (Array.isArray(node.children)) {
       node.children.forEach((child) => {
         createElement(child);
       });
-    }
-    if (typeof node.children == "string") {
+    } else if (typeof node.children == "string") {
       el.innerHTML = node.children;
+    } else {
+      error("The children argument of node should be either an array or String");
     }
     return el;
   };

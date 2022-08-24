@@ -1,4 +1,4 @@
-import error from "./error.js"
+import error from "./error.js";
 let node = (tag, props, children) => {
   return {
     tag,
@@ -9,16 +9,17 @@ let node = (tag, props, children) => {
 let createElement = (node) => {
   let el = document.createElement(node.tag);
   for (const [key, value] in node.props) {
+    console.log(key, value);
     el.setAttribute(key, value);
   }
   if (Array.isArray(node.children)) {
     node.children.forEach((child) => {
       createElement(child, el);
     });
-  }else if (typeof node.children == "string") {
+  } else if (typeof node.children == "string") {
     el.innerHTML = node.children;
-  }else{
-    error("The children argument of node should be either an array or String")
+  } else {
+    error("The children argument of node should be either an array or String");
   }
   return el;
 };
@@ -67,6 +68,3 @@ let render = (node, el) => {
   el.appendChild(createElement(node));
 };
 export { node, createElement, update, render };
-// test
-let el = createElement(node("h1", {}, "Hello World"));
-ren
