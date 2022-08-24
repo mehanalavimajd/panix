@@ -1,4 +1,4 @@
-import { createElement } from "../../dist/panix.es.js";
+import { createElement } from "../../src/index.js";
 
 describe("createElement works with single child", () => {
   let original, made;

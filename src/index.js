@@ -8,9 +8,10 @@ let node = (tag, props, children) => {
 };
 let createElement = (node) => {
   let el = document.createElement(node.tag);
-  for (const [key, value] in node.props) {
-    console.log(key, value);
-    el.setAttribute(key, value);
+  for (const key in node.props) {
+    if (node.props.hasOwnProperty(key)) {
+      el.setAttribute(key, node.props[key]);
+    }
   }
   if (Array.isArray(node.children)) {
     node.children.forEach((child) => {
