@@ -28,8 +28,8 @@ let createElement = (node) => {
   return el;
 };
 let update = (newnode, oldel) => {
-  if (newnode.tag !== oldel.tagName) {
-    oldel.parentNode.replaceChild(createElement(newnode), oldel);
+  if (newnode.tag.toLowerCase !== oldel.tagName.toLowerCase) {
+    oldel = createElement(newnode);
   } else {
     // props
     if (newnode.props.length === oldel.attributes.length) {
@@ -39,6 +39,8 @@ let update = (newnode, oldel) => {
         for (const [key, value] in newnode.props) {
         }
       });
+    } else {
+      oldel = createElement(newnode);
     }
     // children
     if (Array.isArray(newnode.children)) {
@@ -51,7 +53,7 @@ let update = (newnode, oldel) => {
           i++;
         });
       } else {
-        oldel.parentNode.replaceChild(createElement(newnode), oldel);
+        oldel = createElement(newnode);
       }
     } else if (typeof newnode.children == "string") {
       if (newnode.children !== oldel.textContent) {
@@ -59,6 +61,7 @@ let update = (newnode, oldel) => {
       }
     }
   }
+  return oldel;
 };
 let render = (node, el) => {
   el.appendChild(createElement(node));

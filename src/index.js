@@ -26,7 +26,7 @@ let createElement = (node) => {
 };
 let update = (newnode, oldel) => {
   if (newnode.tag.toLowerCase !== oldel.tagName.toLowerCase) {
-    oldel=createElement(newnode)
+    oldel = createElement(newnode);
   } else {
     // props
     if (newnode.props.length === oldel.attributes.length) {
@@ -44,8 +44,8 @@ let update = (newnode, oldel) => {
           oldValue = newValue;
         }
       });
-    }else{
-        oldel=createElement(newnode)
+    } else {
+      oldel = createElement(newnode);
     }
     // children
     if (Array.isArray(newnode.children)) {
@@ -58,7 +58,7 @@ let update = (newnode, oldel) => {
           i++;
         });
       } else {
-          oldel=createElement(newnode)
+        oldel = createElement(newnode);
       }
     } else if (typeof newnode.children == "string") {
       if (newnode.children !== oldel.textContent) {
