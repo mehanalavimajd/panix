@@ -24,7 +24,7 @@
     }
     if (Array.isArray(node.children)) {
       node.children.forEach((child) => {
-        createElement(child);
+        el.appendChild(createElement(child));
       });
     } else if (typeof node.children == "string") {
       el.innerHTML = node.children;
