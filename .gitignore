@@ -1,6 +1,4 @@
 node_modules/
-*.html
-*.css
 *.log
 syntax/
 *example*
