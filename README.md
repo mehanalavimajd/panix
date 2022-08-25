@@ -5,7 +5,7 @@
 
 Panix is a tiny weight Virtual Dom library . <br>
 Today's Virtual Doms have easy syntax but they are heavy , **very heavy** . <br>
-Panix is one of the most lightweight (~1kb) virtual DOM implementation, and is a learning resource more than a tool you should actually use in production.
+Panix is one of the most lightweight (~1kb) virtual DOM implementations, and is a learning resource more than a tool you should actually use in production.
 
 ## Installation
 Or if you want to use npm :
@@ -24,10 +24,23 @@ let's make a simple example in panix :
 let el = createElement(node("h1", { id: "hello" },"Hello World"));
 render(el, document.body); // render the element to the body
 let newNode= node("h1", { id: "hello" },"Bye World");
-update(el, newNode); // update the element
+let el = update(el, newNode); // update the element
+render(el, document.body) // re-render
 ```
+## Timer
+```js
 
-Now You have made your first panix project.
+let timer = 0
+let el = createElement(node("p",{id:"time"},"hello world"))
+render(el, document.body);
+setInterval(() => {
+  timer++;
+  document.body.removeChild(el)
+  let newNode = node("p",{id:"time"},`${timer}`)
+   el =update(newNode,el)
+   render(el,document.body)
+}, 1000);
+```
 
 #### Thank you
 
