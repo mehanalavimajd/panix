@@ -68,7 +68,7 @@ let update = (newnode, oldel) => {
   }
   return oldel;
 };
-let render = (node, el) => {
-  el.appendChild(createElement(node));
+let render = (el, cont) => {
+  cont.appendChild(el);
 };
 export { node, createElement, update, render };

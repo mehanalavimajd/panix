@@ -7,12 +7,12 @@
   "unpkg": "./dist/panix.es.min.js",
   "jsdelivr": "./dist/panix.es.min.js",
   "scripts": {
-    "test": "firefox ./tests/specRunner.html",
+    "test": "firefox ./tests/SpecRunner.html",
     "pretty": "npx prettier --write .",
     "minify": "node .minify.js",
     "prepare": "npx prettier --write . && npx rollup -c && node ./minifier.js && husky install"
   },
-  "author": "mehan alavimajd",
+  "author": "Mehan alavimajd",
   "license": "see License in LICENSE",
   "devDependencies": {
     "husky": "^8.0.1",
