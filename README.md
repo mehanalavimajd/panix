@@ -29,7 +29,6 @@ render(el, document.body) // re-render
 ```
 ## Timer
 ```js
-
 let timer = 0
 let el = createElement(node("p",{id:"time"},"hello world"))
 render(el, document.body);
@@ -41,6 +40,19 @@ setInterval(() => {
    render(el,document.body)
 }, 1000);
 ```
+## API
+
+`node(tagName:[String],props:[object,null],Children:[array,string])`:
+makes a Panix node object and returns it.
+
+`createElement(node:[Panix node])`:
+Creates a DOM element and returns it. If  children is an array would make a element in parent element
+
+`render(container:[element],el:[element])`:
+Add el to container
+
+`update(newNode:[Panix Node], oldElement:[element])`:
+Checks all diffrences between this two, Then return a element that is new one. It doesn't just replace them, It checks for each props,children to be same or not.
 
 #### Thank you
 
