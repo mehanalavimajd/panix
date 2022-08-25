@@ -1,4 +1,4 @@
-import { render, node, createElement,update } from "../../src/index.js";
+import { render, node, createElement, update } from "../../src/index.js";
 
 describe("Render Tests", () => {
   it("Render is ok", () => {
@@ -6,4 +6,3 @@ describe("Render Tests", () => {
     expect(document.getElementById("hello").textContent).toEqual("hello");
   });
 });
-

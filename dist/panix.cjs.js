@@ -9,7 +9,7 @@ const error = (text) => {
 let node = (tag, props, children) => {
   return {
     tag,
-    props,
+    props: !props ? {} : props,
     children,
   };
 };
@@ -67,8 +67,8 @@ let update = (newnode, oldel) => {
   }
   return oldel;
 };
-let render = (node, el) => {
-  el.appendChild(createElement(node));
+let render = (el, cont) => {
+  cont.appendChild(el);
 };
 
 exports.createElement = createElement;
