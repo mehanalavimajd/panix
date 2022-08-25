@@ -2,7 +2,7 @@ import error from "./error.js";
 let node = (tag, props, children) => {
   return {
     tag,
-    props,
+    props:!props?{}:props,
     children,
   };
 };
