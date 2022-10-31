@@ -22,7 +22,7 @@
   "dependencies": {
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.16.5",
-    "jsdom": "^20.0.0",
+    "jsdom": "^20.0.2",
     "uglify-js": "^3.17.0"
   },
   "repository": {
