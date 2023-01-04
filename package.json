@@ -15,7 +15,7 @@
   "author": "Mehan alavimajd",
   "license": "see License in LICENSE",
   "devDependencies": {
-    "husky": "^8.0.1",
+    "husky": "^8.0.3",
     "prettier": "^2.3.2",
     "rollup": "^2.58.0"
   },
