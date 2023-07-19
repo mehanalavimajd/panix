@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@testing-library/dom": "^8.17.1",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "jsdom": "^20.0.0",
     "uglify-js": "^3.17.0"
   },
